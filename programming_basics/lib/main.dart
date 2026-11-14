@@ -18,6 +18,7 @@ final double height = 5.5;
 final bool isStudent = true;
 final double marks = 90;
 final String grade = 'A';
+final List numbers = const [1,2,3,4,5,6,7,8,9,10];
 
 /*
 ============================================================================
@@ -80,10 +81,45 @@ int functionName(parameter){
 // code to be executed
 return value;
 }
+================================================================================
+
+Data Structure 
+data structure is a way of organizing and storing data in a 
+computer so that it can be accessed and modified efficiently.
+
+List<int> numbers = [1,2,3,4,5,6,7,8,9,10];
+List<String> names = ['Salman', 'Aamir', 'Shahrukh', 'Akshay'];
+
+
+Set 
+unordered collection of unique items 
+Set<String> names = {'Salman', 'Amir', },
+
+
+Map
+map is a collection of key-value pairs 
+where each key is unique and maps to a specific value.
+
+
 
 
 
 */
+
+Map user = {
+  'name': 'salman khan',
+  'age ': 24,
+  'height': 5.5,
+  'isStudent': true,
+};
+
+// printUserDetails(Map user){
+//   print('Name: ${user['name']}');
+//   print('Age: ${user['age']}');
+//   print('Height: ${user['height']}');
+//   print('Is Student: ${user['isStudent']}');
+// }
+
 // void means that the function will return nothing and greet is the name of the function
 void greet(){
   print('Hello');
@@ -96,11 +132,19 @@ void greetWithName(String name){
 int add(int a, int b){
   return a + b;
 }
+void printNumbers(){
+  for(int i =0; i<numbers.length; i++){
+    print(numbers[i]);
+  }
+}
+
 
 
 
   @override
   Widget build(BuildContext context) {
+    printNumbers();
+    
     greet();
     greetWithName('Salman khan');
     int result = add(5, 10);
@@ -174,6 +218,8 @@ int add(int a, int b){
     default:
     print('No grade available');
   }
+
+  
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
