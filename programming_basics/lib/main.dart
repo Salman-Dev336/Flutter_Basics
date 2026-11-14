@@ -30,6 +30,26 @@ final bool isStudent = true;
 5 > 3 // true
 3 < 5 // true 
 
+Logical Operators
+&& , ||, ! 
+isBeginner && isStudent // true
+isBeginner || isStudent // true
+!isBeginner // false
+
+
+Control flo Statements
+if(age>18){
+print('You are eligible to drive );
+}
+elseif (age > 60 ){
+print('you are required to renew the license);
+}
+else{
+print('you are not eligible to drive);
+}
+
+
+
 */
 
 
@@ -37,6 +57,19 @@ final bool isStudent = true;
 
   @override
   Widget build(BuildContext context) {
+    if(age>18){
+      print('you are eligible to drive');
+    }
+    else{
+      print("your are not eligible to drive");
+    }
+
+    if(height >= 5.5){
+      print('you can join the cricket team ');
+    }
+    else{
+      print('you cannot join the cricket team');
+    }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
