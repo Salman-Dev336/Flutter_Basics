@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:programming_basics/pages/first-page.dart';
+import 'package:programming_basics/pages/second-page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -139,7 +141,9 @@ where each key is unique and maps to a specific value.
 //   }
 // }
 
-
+// void userTapped(){
+//   print('user tapped the button');
+// }
 
 
   @override
@@ -221,28 +225,33 @@ where each key is unique and maps to a specific value.
   // }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
-        appBar: AppBar(
-          elevation: 0,
-          leading: Icon(Icons.menu),
-          actions: [
-            IconButton(
-              onPressed: (){},
-               icon: Icon(
-                Icons.logout
-                ),
-               ),
-          ],
-          title: const Text('My App',
-          style: TextStyle(
-            fontSize: 24,
-            color: Colors.white,
+      home: Firstpage(),
+      routes: {
+        '/secondpage':(context)=> SecondPage(),
 
-          )),
-          centerTitle: true,
-          backgroundColor: Colors.deepPurple[500],
-        ),
+      },
+      // home: Scaffold(
+      //   backgroundColor: Colors.deepPurple[200],
+      //   appBar: AppBar(
+      //     elevation: 0,
+      //     leading: Icon(Icons.menu),
+      //     actions: [
+      //       IconButton(
+      //         onPressed: (){},
+      //          icon: Icon(
+      //           Icons.logout
+      //           ),
+      //          ),
+      //     ],
+      //     title: const Text('My App',
+      //     style: TextStyle(
+      //       fontSize: 24,
+      //       color: Colors.white,
+
+      //     )),
+      //     centerTitle: true,
+      //     backgroundColor: Colors.deepPurple[500],
+        // ),
         // body: GridView.builder(
         //   itemCount: 64,
         //   // how many in each row 
@@ -257,28 +266,27 @@ where each key is unique and maps to a specific value.
         //   //   ),
         //   // ),
         // ),
-        body: Center(
-          child: GestureDetector(
-            onTap:() {
-              // do something when user tap this 
-              print('user tapped the button');
-            },
-            child: Container(
-              height: 300,
-              width: 300,
-              color: const Color.fromARGB(255, 98, 93, 185),
-              child: Center(
-                child: Text(
-                  'Tap Me ',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24, 
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
+        // body: Center(
+        //   child: GestureDetector(
+        //     onTap: userTapped,
+        //       // do something when user tap this 
+            
+        //     child: Container(
+        //       height: 300,
+        //       width: 300,
+        //       color: const Color.fromARGB(255, 98, 93, 185),
+        //       child: Center(
+        //         child: Text(
+        //           'Tap Me ',
+        //           style: TextStyle(
+        //             color: Colors.white,
+        //             fontSize: 24, 
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        // ),
 
 
 
@@ -359,7 +367,7 @@ where each key is unique and maps to a specific value.
 
         //   ),
         // )
-      ),
+      // ),
     );
   }
 }
