@@ -7,6 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  final List names = const ['salman', 'mashal', 'abdurehman'];
   // super.key  is used to pass the key to parent class constructor 
 
 // Variables we can use to store data in these variables 
@@ -242,35 +243,97 @@ where each key is unique and maps to a specific value.
           centerTitle: true,
           backgroundColor: Colors.deepPurple[500],
         ),
-        body: ListView(
-          // scrollDirection: Axis.horizontal,
-          // mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            //1st box
-            Container(
+        // body: GridView.builder(
+        //   itemCount: 64,
+        //   // how many in each row 
+        //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
+        //   itemBuilder: (context, index)=>Container(
+        //     color: Colors.blue,
+        //     margin: EdgeInsets.all(2),
+        //   ),
+        //   // itemBuilder: (context, index)=> ListTile(
+        //   //   title: Text(
+        //   //     names[index],
+        //   //   ),
+        //   // ),
+        // ),
+        body: Center(
+          child: GestureDetector(
+            onTap:() {
+              // do something when user tap this 
+              print('user tapped the button');
+            },
+            child: Container(
               height: 300,
               width: 300,
-              color: Colors.blue,
+              color: const Color.fromARGB(255, 98, 93, 185),
+              child: Center(
+                child: Text(
+                  'Tap Me ',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24, 
+                  ),
+                ),
+              ),
             ),
-
-            //2nd box
-             Container(
-              height: 300,
-              width: 300,
-              color: Colors.red,
-            ),
-
-            //3rd box
-             Container(
-              height: 300,
-              width: 300,
-              color: Colors.green,
-            ),
-
-
-          ],
+          ),
         ),
+
+
+
+        // body: Stack(
+        //   alignment: Alignment.center,
+        //   children: [
+        //     Container(
+        //       height: 300,
+        //       width: 300,
+        //       color: Colors.blue,
+        //     ),
+
+        //     Container(
+        //       height: 200,
+        //       width: 200,
+        //       color: Colors.amber,
+        //     ),
+
+        //     Container(
+        //       height: 100,
+        //       width: 100,
+        //       color: Colors.pink,
+        //     ),
+
+        //   ]
+        // )
+        // body: ListView(
+        //   // scrollDirection: Axis.horizontal,
+        //   // mainAxisAlignment: MainAxisAlignment.center,
+        //   // crossAxisAlignment: CrossAxisAlignment.end,
+        //   children: [
+        //     //1st box
+        //     Container(
+        //       height: 300,
+        //       width: 300,
+        //       color: Colors.blue,
+        //     ),
+
+        //     //2nd box
+        //      Container(
+        //       height: 300,
+        //       width: 300,
+        //       color: Colors.red,
+        //     ),
+
+        //     //3rd box
+        //      Container(
+        //       height: 300,
+        //       width: 300,
+        //       color: Colors.green,
+        //     ),
+
+
+        //   ],
+        // ),
         // Center(
         //   child: Container(
         //     height: 300,
