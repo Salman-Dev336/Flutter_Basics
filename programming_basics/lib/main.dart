@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
 // Variables we can use to store data in these variables 
 // final means that the value will not change after it is assigned 
 
-final String name = 'Salman khan';
-final int age = 24;
-final double height = 5.5;
-final bool isStudent = true;
-final double marks = 90;
-final String grade = 'A';
-final List numbers = const [1,2,3,4,5,6,7,8,9,10];
+// final String name = 'Salman khan';
+// final int age = 24;
+// final double height = 5.5;
+// final bool isStudent = true;
+// final double marks = 90;
+// final String grade = 'A';
+// final List numbers = const [1,2,3,4,5,6,7,8,9,10];
 
 /*
 ============================================================================
@@ -106,12 +106,12 @@ where each key is unique and maps to a specific value.
 
 */
 
-Map user = {
-  'name': 'salman khan',
-  'age ': 24,
-  'height': 5.5,
-  'isStudent': true,
-};
+// Map user = {
+//   'name': 'salman khan',
+//   'age ': 24,
+//   'height': 5.5,
+//   'isStudent': true,
+// };
 
 // printUserDetails(Map user){
 //   print('Name: ${user['name']}');
@@ -121,112 +121,136 @@ Map user = {
 // }
 
 // void means that the function will return nothing and greet is the name of the function
-void greet(){
-  print('Hello');
-}
+// void greet(){
+//   print('Hello');
+// }
 
-void greetWithName(String name){
-  print('hello, $name');
-}
+// void greetWithName(String name){
+//   print('hello, $name');
+// }
 
-int add(int a, int b){
-  return a + b;
-}
-void printNumbers(){
-  for(int i =0; i<numbers.length; i++){
-    print(numbers[i]);
-  }
-}
+// int add(int a, int b){
+//   return a + b;
+// }
+// void printNumbers(){
+//   for(int i =0; i<numbers.length; i++){
+//     print(numbers[i]);
+//   }
+// }
 
 
 
 
   @override
   Widget build(BuildContext context) {
-    printNumbers();
+    // printNumbers();
     
-    greet();
-    greetWithName('Salman khan');
-    int result = add(5, 10);
-    print('the result is $result');
+    // greet();
+    // greetWithName('Salman khan');
+    // int result = add(5, 10);
+    // print('the result is $result');
 
 
-    int count = 5;
-    while(count > 0 ){
-      print('count is $count');
-      count--;
-    }
+    // int count = 5;
+    // while(count > 0 ){
+    //   print('count is $count');
+    //   count--;
+    // }
 
-    for(int i = 0; i<=10; i++){
-      if(i == 6){
-        // break;
-        continue;// will skip the current iteration and 
-        // move to the next iteration of the loop 
-      }
+    // for(int i = 0; i<=10; i++){
+    //   if(i == 6){
+    //     // break;
+    //     continue;// will skip the current iteration and 
+    //     // move to the next iteration of the loop 
+    //   }
 
-      if(i%2 == 0){
-        print('$i is even');
-      }
-      else{
-        print('$i is odd');
-      }
-    }
-
-
+    //   if(i%2 == 0){
+    //     print('$i is even');
+    //   }
+    //   else{
+    //     print('$i is odd');
+    //   }
+    // }
 
 
-    if(age>18){
-      print('you are eligible to drive');
-    }
-    else{
-      print("your are not eligible to drive");
-    }
 
-    if(height >= 5.5){
-      print('you can join the cricket team ');
-    }
-    else{
-      print('you cannot join the cricket team');
-    }
 
-    if(marks >= 85 && isStudent){
-      print('you are eligible for the Scholorship');
-    }
-    else{
-      print('uou are not eligible for the Scholorship');
-    }
+    // if(age>18){
+    //   print('you are eligible to drive');
+    // }
+    // else{
+    //   print("your are not eligible to drive");
+    // }
+
+    // if(height >= 5.5){
+    //   print('you can join the cricket team ');
+    // }
+    // else{
+    //   print('you cannot join the cricket team');
+    // }
+
+    // if(marks >= 85 && isStudent){
+    //   print('you are eligible for the Scholorship');
+    // }
+    // else{
+    //   print('uou are not eligible for the Scholorship');
+    // }
 
     // Switch Statement
 
-  switch(grade){
-    case 'A':
-    print('Excellent');
-    break;
+  // switch(grade){
+  //   case 'A':
+  //   print('Excellent');
+  //   break;
 
-    case 'B':
-    print('Good');
-    break;
+  //   case 'B':
+  //   print('Good');
+  //   break;
 
-    case 'C':
-    print ('Average');
-    break;
+  //   case 'C':
+  //   print ('Average');
+  //   break;
 
-    case 'D':
-    print('fail');
-    break;
+  //   case 'D':
+  //   print('fail');
+  //   break;
 
-    default:
-    print('No grade available');
-  }
+  //   default:
+  //   print('No grade available');
+  // }
 
   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.teal[100],
         appBar: AppBar(
           title: const Text('My App'),
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.teal[300],
         ),
+        body: Center(
+          child: Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.circular(20)
+            ),
+
+            // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 60),
+            // padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
+         
+            child: Text(
+              'hello Salman',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              )
+            )
+          ),
+        )
       ),
     );
   }
