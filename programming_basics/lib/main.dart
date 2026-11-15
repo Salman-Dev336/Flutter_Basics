@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:programming_basics/pages/Home-page.dart';
+import 'package:programming_basics/pages/Setting-page.dart';
 import 'package:programming_basics/pages/first-page.dart';
-import 'package:programming_basics/pages/second-page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -227,7 +228,9 @@ where each key is unique and maps to a specific value.
       debugShowCheckedModeBanner: false,
       home: Firstpage(),
       routes: {
-        '/secondpage':(context)=> SecondPage(),
+        '/homepage': (context)=> HomePage(),
+        '/settingpage': (context)=> SettingPage(),
+        // '/secondpage':(context)=> SecondPage(),
 
       },
       // home: Scaffold(
