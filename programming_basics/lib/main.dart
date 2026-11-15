@@ -218,39 +218,84 @@ where each key is unique and maps to a specific value.
   //   default:
   //   print('No grade available');
   // }
-
-  
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.teal[100],
+        backgroundColor: Colors.deepPurple[200],
         appBar: AppBar(
-          title: const Text('My App'),
-          backgroundColor: Colors.teal[300],
+          elevation: 0,
+          leading: Icon(Icons.menu),
+          actions: [
+            IconButton(
+              onPressed: (){},
+               icon: Icon(
+                Icons.logout
+                ),
+               ),
+          ],
+          title: const Text('My App',
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.white,
+
+          )),
+          centerTitle: true,
+          backgroundColor: Colors.deepPurple[500],
         ),
-        body: Center(
-          child: Container(
-            height: 200,
-            width: 200,
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(20)
+        body: ListView(
+          // scrollDirection: Axis.horizontal,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            //1st box
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.blue,
             ),
 
-            // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 60),
-            // padding: const EdgeInsets.all(20),
-            padding: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
+            //2nd box
+             Container(
+              height: 300,
+              width: 300,
+              color: Colors.red,
+            ),
+
+            //3rd box
+             Container(
+              height: 300,
+              width: 300,
+              color: Colors.green,
+            ),
+
+
+          ],
+        ),
+        // Center(
+        //   child: Container(
+        //     height: 300,
+        //     width: 300,
+        //     decoration: BoxDecoration(
+        //       color: Colors.deepPurple,
+        //       borderRadius: BorderRadius.circular(20),
+
+
+        //     ),
+
+        //     // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 60),
+        //     // padding: const EdgeInsets.all(20),
+        //     padding: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
          
-            child: Text(
-              'hello Salman',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              )
-            )
-          ),
-        )
+        //     child: Icon(
+        //       Icons.favorite,
+        //       color: Colors.red,
+        //       size: 100,
+
+        //     ),
+          
+
+        //   ),
+        // )
       ),
     );
   }
