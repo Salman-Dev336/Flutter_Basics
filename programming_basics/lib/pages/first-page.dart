@@ -13,6 +13,24 @@ class Firstpage extends StatelessWidget {
         centerTitle: true,
         
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+          ),
+
+          BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label: 'Profile',
+          ),
+
+          BottomNavigationBarItem(
+          icon: Icon(Icons.settings),
+          label: 'Setting',
+          ),
+
+
+      ]),
       drawer: Drawer(
         backgroundColor: Colors.tealAccent[100],
         child: Column(
@@ -54,6 +72,8 @@ class Firstpage extends StatelessWidget {
           ],
         ),
       ),
+     
+
 
       // appBar: AppBar(
       //   title: Text('My First page'),
