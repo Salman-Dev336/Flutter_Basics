@@ -1,8 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:programming_basics/pages/Home-page.dart';
+import 'package:programming_basics/pages/Setting-page.dart';
+import 'package:programming_basics/pages/profile-page.dart';
 
 
-class Firstpage extends StatelessWidget {
+class Firstpage extends StatefulWidget {
   const Firstpage({super.key});
+
+  @override
+  State<Firstpage> createState() => _FirstpageState();
+}
+
+class _FirstpageState extends State<Firstpage> {
+
+  // keep the track of the current page
+  int _selectedIndex = 0;
+
+  //method to update the selected index
+
+  void _navigateBottomBar(int index){
+    setState(() {
+      _selectedIndex = index;
+
+    });
+  }
+
+  final List _pages = const [
+    HomePage(),
+    SettingPage(),
+    ProfilePage(),
+
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +41,12 @@ class Firstpage extends StatelessWidget {
         centerTitle: true,
         
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _navigateBottomBar,
+
+        items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',
